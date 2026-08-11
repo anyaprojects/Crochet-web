@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ananya — vezel- en haakkunstenaar. Met toewijding gemaakte knuffels om te koesteren, van natuurlijke garens in kleine oplages." />
+  <title>Ananya · Vezel- &amp; Haakkunstenaar</title>
+  <link rel="alternate" hreflang="en" href="https://anyaprojects.github.io/Crochet-web/" />
+  <link rel="alternate" hreflang="nl" href="https://anyaprojects.github.io/Crochet-web/nl/" />
+  <link rel="alternate" hreflang="de" href="https://anyaprojects.github.io/Crochet-web/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://anyaprojects.github.io/Crochet-web/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__photo"></div>
+    <div class="backdrop__scrim"></div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="monogram" href="#top" aria-label="Ananya — home">
+      <span class="monogram__mark">A</span>
+    </a>
+    <nav class="topnav" aria-label="Hoofdmenu">
+      <a href="#about">Verhaal</a>
+      <a href="#gallery">Galerij</a>
+      <a href="#process">Werkwijze</a>
+      <a href="#contact">Contact</a>
+      <span aria-hidden="true" style="opacity:.4;margin:0 .1rem">·</span>
+      <a href="../" hreflang="en">EN</a>
+      <a href="./" hreflang="nl" aria-current="true" style="text-decoration:underline">NL</a>
+      <a href="../de/" hreflang="de">DE</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="hero__center">
+        <p class="hero__eyebrow">Vezel- &amp; Haakkunstenaar</p>
+        <h1 class="hero__name">Ananya</h1>
+        <div class="hero__rule" aria-hidden="true"></div>
+        <p class="hero__tag">Handgemaakte vriendjes — stuk voor stuk langzaam met de hand gehaakt, elk met een eigen naam en verhaal.</p>
+      </div>
+      <a class="hero__cue" href="#about" aria-label="Scroll om te ontdekken">
+        <span>Scroll</span>
+        <span class="hero__cue-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <div class="sheet">
+
+      <!-- OVER MIJ / VERHAAL -->
+      <section id="about" class="section reveal">
+        <p class="kicker">I · Over mij</p>
+        <h2 class="h2">Aan de haak door één klein steekje</h2>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lede">
+              Hoi — ik ben Ananya. Ik ben tien jaar en helemaal, dolgelukkig
+              verslingerd aan haken.
+            </p>
+            <p class="prose">
+              Het begon allemaal twee jaar geleden, toen een vriendin me één
+              basissteek leerde. Dat ene lusje was genoeg — ik was verkocht!
+              Sindsdien heb ik alles zelf geleerd, van filmpjes, boeken en heel
+              veel fantasie.
+            </p>
+            <p class="prose">
+              Mijn allereerste knuffels waren… laten we ze <em>experimenteel</em>
+              noemen — vormeloze bolletjes zonder echte vorm. Maar van elk
+              wiebelig geval leerde ik weer iets nieuws. Dat gevoel vind ik nog
+              steeds heerlijk, dus ik blijf ontdekkende stukjes maken waarbij ik
+              gewoon begin te haken zonder plan en zie wie er tevoorschijn komt.
+              En eerlijk? Je betrapt me <em>overal</em> met mijn haaknaald — in de
+              auto, op de bank, waarschijnlijk nu ook.
+            </p>
+          </div>
+
+          <figure class="maker-figure">
+            <div class="maker-figure__frame">
+              <img src="../images/portrait-maker.jpg"
+                   alt="Portret van Ananya, vezel- en haakkunstenaar"
+                   loading="lazy" width="880" height="1100" />
+            </div>
+            <figcaption>Ananya · de maker</figcaption>
+          </figure>
+        </div>
+
+        <ul class="stats" aria-label="Hoogtepunten">
+          <li class="stat">
+            <span class="stat__num">10</span>
+            <span class="stat__label">Jaar oud</span>
+          </li>
+          <li class="stat">
+            <span class="stat__num">2</span>
+            <span class="stat__label">Jaar aan het haken</span>
+          </li>
+          <li class="stat">
+            <span class="stat__num">1</span>
+            <span class="stat__label">Steek waar het mee begon</span>
+          </li>
+          <li class="stat">
+            <span class="stat__num">100<span class="stat__accent">%</span></span>
+            <span class="stat__label">Zelf geleerd</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- GALERIJ -->
+      <section id="gallery" class="section reveal">
+        <p class="kicker">II · Uitgelicht werk</p>
+        <h2 class="h2">De Galerij</h2>
+        <p class="prose prose--center">Een kleine collectie recente stukjes. Klik op een stukje om het verhaal te lezen.</p>
+
+        <div class="gallery" role="list">
+
+          <!-- LUNA — af -->
+          <button class="piece" type="button" role="listitem"
+                  style="--photo:url('../images/gallery-01.jpg')"
+                  data-title="Luna de Vriendelijke Heks"
+                  data-yarn="Katoen — saliegroen, zwart &amp; tarwe"
+                  data-stitch="Amigurumi, vaste steken in het rond"
+                  data-swatch="e"
+                  data-story="Luna is een vriendelijk heksje dat ik heb gemaakt — een saliegroene jas, een zwierige zwarte jurk, gouden krullen en een klein puntig hoedje. Haar gezichtje heb ik met de hand geborduurd, zodat ze een lieve, nieuwsgierige blik heeft. Ze is een geluksvriendinnetje, geen enge heks!">
+            <span class="piece__img" data-swatch="e"></span>
+            <span class="piece__scrim"></span>
+            <span class="piece__meta">
+              <span class="piece__name">Luna de Vriendelijke Heks</span>
+              <span class="piece__tag">Handgemaakt · Katoen</span>
+            </span>
+          </button>
+
+          <!-- OTTI — volgende project -->
+          <button class="piece" type="button" role="listitem"
+                  style="--photo:url('../images/gallery-02.jpg')"
+                  data-title="Otti"
+                  data-yarn="Katoen — petrol &amp; antraciet"
+                  data-stitch="Amigurumi, vaste steken in het rond"
+                  data-swatch="b"
+                  data-story="Otti is het vriendje dat ik hierna ga maken — een vrolijk kereltje in een petrolkleurige tuinbroek en een slappe grijze hoed. Dit is het project waar ik me het meest op verheug, en hij komt in de galerij zodra hij klaar is!">
+            <span class="piece__badge">Volgende project</span>
+            <span class="piece__img" data-swatch="b"></span>
+            <span class="piece__scrim"></span>
+            <span class="piece__meta">
+              <span class="piece__name">Otti</span>
+              <span class="piece__tag">Straks aan mijn haaknaald</span>
+            </span>
+          </button>
+
+          <div class="piece piece--soon" aria-hidden="true">
+            <span class="piece__soon-inner">
+              <span class="piece__soon-mark">✧</span>
+              <span class="piece__soon-label">Nieuw stukje<br>binnenkort</span>
+            </span>
+          </div>
+          <div class="piece piece--soon" aria-hidden="true">
+            <span class="piece__soon-inner">
+              <span class="piece__soon-mark">✧</span>
+              <span class="piece__soon-label">Nieuw stukje<br>binnenkort</span>
+            </span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- WERKWIJZE -->
+      <section id="process" class="section reveal">
+        <p class="kicker">III · Hoe ik dingen maak</p>
+        <h2 class="h2">Mijn rommelige, blije werkwijze</h2>
+
+        <ol class="process">
+          <li class="step">
+            <span class="step__num">I</span>
+            <div class="step__body">
+              <h3 class="step__title">Een vonkje (of niet!)</h3>
+              <p>Soms heb ik een plan… en soms pak ik gewoon mijn garen en begin ik zonder te weten wat het wordt. Allebei vind ik het leukst.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__num">II</span>
+            <div class="step__body">
+              <h3 class="step__title">Al doende leren</h3>
+              <p>Filmpjes, boeken en heel veel fantasie. Als er een steek is die ik nog niet ken, zoek ik hem op en leer ik het mezelf.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__num">III</span>
+            <div class="step__body">
+              <h3 class="step__title">Haken, haken, haken</h3>
+              <p>Toer na toer verschijnt er langzaam een vorm. Sommige worden knuffels; sommige worden vrolijke bolletjes — en eerlijk, daar leer ik het meest van.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__num">IV</span>
+            <div class="step__body">
+              <h3 class="step__title">Maak kennis met het nieuwe vriendje</h3>
+              <p>Ik borduur een gezichtje en ineens is er een karaktertje. Dan krijgt het een naam — en is het klaar voor een knuffel.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- CONTACT / FOOTER -->
+      <footer id="contact" class="section section--contact reveal">
+        <p class="kicker">IV · Zeg hallo</p>
+        <h2 class="h2">Laten we vriendjes worden</h2>
+        <p class="prose prose--center">
+          Ben je verliefd op een van mijn knuffeltjes, of heb je een idee voor
+          eentje? Stuur me een berichtje — ik hoor graag van je!
+        </p>
+        <a class="btn" href="mailto:hello@example.com">Zeg hallo</a>
+
+        <div class="footer__base">
+          <span class="monogram__mark monogram__mark--sm">A</span>
+          <p class="footer__fine">© <span id="year"></span> Ananya · Vezel- &amp; Haakkunstenaar · Met zorg handgemaakt</p>
+        </div>
+      </footer>
+
+    </div><!-- /.sheet -->
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+    <div class="lightbox__backdrop" data-close></div>
+    <div class="lightbox__panel" role="document">
+      <button class="lightbox__close" type="button" data-close aria-label="Voorbeeld sluiten">×</button>
+      <div class="lightbox__media" id="lb-media" aria-hidden="true"></div>
+      <div class="lightbox__body">
+        <p class="kicker">Uitgelicht werk</p>
+        <h3 class="lightbox__title" id="lb-title">Naam stukje</h3>
+        <div class="lightbox__rule" aria-hidden="true"></div>
+        <dl class="lightbox__specs">
+          <div class="spec">
+            <dt>Soort garen</dt>
+            <dd id="lb-yarn">—</dd>
+          </div>
+          <div class="spec">
+            <dt>Gebruikte steek</dt>
+            <dd id="lb-stitch">—</dd>
+          </div>
+        </dl>
+        <p class="lightbox__story" id="lb-story">Beschrijving van het verhaal.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
