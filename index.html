@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  =========================================================================
+  ANANYA — Fiber & Crochet Artist | Editorial Portfolio
+  -------------------------------------------------------------------------
+  Direction: quiet, devotional, high-end editorial — inspired by fine-art
+  crochet photography. A single fixed full-bleed photograph sits behind
+  everything; the content scrolls over it on a frosted "cream paper" sheet.
+  Marsala + cream + sage + gold palette. Cormorant Garamond display with
+  wide letter-spacing, EB Garamond prose, Jost for small uppercase labels.
+
+  DROP-IN PHOTOS  (no code changes needed):
+    Create an /images folder next to these files and add:
+      images/hero.jpg        → the fixed background photograph
+      images/gallery-01.jpg … images/gallery-06.jpg  → the six gallery pieces
+    Until those files exist, tasteful mood-matched gradients show instead.
+    (Filenames are wired below via the --photo / --hero-photo variables.)
+
+  No build step, no dependencies — deploy to a GitHub Pages repo root.
+  =========================================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ananya — fiber and crochet artist. Devotional, heirloom pieces in natural, small-batch fibers." />
+  <title>Ananya · Fiber &amp; Crochet Artist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Cormorant Garamond (display) · EB Garamond (prose) · Jost (labels) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- =====================================================================
+       FIXED BACKDROP — the single full-bleed photograph.
+       Swap by adding images/hero.jpg (see --hero-photo in styles.css).
+       ===================================================================== -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__photo"></div>
+    <div class="backdrop__scrim"></div>
+  </div>
+
+  <!-- Global film-grain overlay for an analog, fine-art feel -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- =====================================================================
+       FIXED MONOGRAM + MINIMAL NAV
+       ===================================================================== -->
+  <header class="topbar">
+    <a class="monogram" href="#top" aria-label="Ananya — home">
+      <span class="monogram__mark">A</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#about">Story</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- =====================================================================
+       SCROLLING CONTENT (rides over the fixed photo)
+       ===================================================================== -->
+  <main id="top">
+
+    <!-- HERO — photo shows through; only the title sits here -->
+    <section class="hero">
+      <div class="hero__center">
+        <p class="hero__eyebrow">Fiber &amp; Crochet Artist</p>
+        <h1 class="hero__name">Ananya</h1>
+        <div class="hero__rule" aria-hidden="true"></div>
+        <p class="hero__tag">Handmade friends — each one stitched slowly, by hand, with its own name and story.</p>
+      </div>
+      <a class="hero__cue" href="#about" aria-label="Scroll to explore">
+        <span>Scroll</span>
+        <span class="hero__cue-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- FROSTED CREAM SHEET — all prose scrolls over the photo on this panel -->
+    <div class="sheet">
+
+      <!-- ABOUT / STORY -->
+      <section id="about" class="section reveal">
+        <p class="kicker">I · About Me</p>
+        <h2 class="h2">Hooked on one little stitch</h2>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lede">
+              Hi — I'm Ananya. I'm ten years old and completely, happily
+              obsessed with crochet.
+            </p>
+            <p class="prose">
+              It all started two years ago, when a friend taught me one basic
+              stitch. That single little loop was all it took — I was hooked!
+              Since then I've taught myself everything else from videos, books,
+              and a whole lot of imagination.
+            </p>
+            <p class="prose">
+              My very first plushies were… let's call them <em>experimental</em>
+              — blobby little things with no real shape. But every wobbly one
+              taught me something new. I still love that feeling, so I keep making
+              exploratory pieces where I just start stitching with no plan at all
+              and see who shows up. And honestly? You'll catch me crocheting
+              <em>everywhere</em> — in the car, on the couch, probably right now.
+            </p>
+          </div>
+
+          <figure class="maker-figure">
+            <div class="maker-figure__frame">
+              <img src="images/portrait-maker.jpg"
+                   alt="Portrait of Ananya, fiber and crochet artist"
+                   loading="lazy" width="880" height="1100" />
+            </div>
+            <figcaption>Ananya · the maker</figcaption>
+          </figure>
+        </div>
+
+        <!-- STATS -->
+        <ul class="stats" aria-label="Highlights">
+          <li class="stat">
+            <span class="stat__num">10</span>
+            <span class="stat__label">Years old</span>
+          </li>
+          <li class="stat">
+            <span class="stat__num">2</span>
+            <span class="stat__label">Years crocheting</span>
+          </li>
+          <li class="stat">
+            <span class="stat__num">1</span>
+            <span class="stat__label">Stitch that started it all</span>
+          </li>
+          <li class="stat">
+            <span class="stat__num">100<span class="stat__accent">%</span></span>
+            <span class="stat__label">Self-taught</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- GALLERY — reference-style full-image cards -->
+      <section id="gallery" class="section reveal">
+        <p class="kicker">II · Selected Works</p>
+        <h2 class="h2">The Gallery</h2>
+        <p class="prose prose--center">A small collection of recent pieces. Select any to read its story.</p>
+
+        <!--
+          Each card is a clickable placeholder. The data-* attributes feed the
+          lightbox. Add images/gallery-0N.jpg to replace the gradient with a
+          real photo (wired through the inline --photo variable).
+        -->
+        <div class="gallery" role="list">
+
+          <!-- LUNA — finished piece -->
+          <button class="piece" type="button" role="listitem"
+                  style="--photo:url('images/gallery-01.jpg')"
+                  data-title="Luna the Friendly Witch"
+                  data-yarn="Cotton — sage, black &amp; wheat"
+                  data-stitch="Amigurumi, single crochet in the round"
+                  data-swatch="e"
+                  data-story="Luna is a friendly little witch I made — a sage-green coat, a swishy black dress, golden curls, and a tiny pointed hat. I embroidered her face by hand to give her a kind, curious look. She's a good-luck friend, not a spooky one!">
+            <span class="piece__img" data-swatch="e"></span>
+            <span class="piece__scrim"></span>
+            <span class="piece__meta">
+              <span class="piece__name">Luna the Friendly Witch</span>
+              <span class="piece__tag">Handmade · Cotton</span>
+            </span>
+          </button>
+
+          <!-- OTTO — next make -->
+          <button class="piece" type="button" role="listitem"
+                  style="--photo:url('images/gallery-02.jpg')"
+                  data-title="Otti"
+                  data-yarn="Cotton — teal &amp; charcoal"
+                  data-stitch="Amigurumi, single crochet in the round"
+                  data-swatch="b"
+                  data-story="Otti is the little friend I'm making next — a cheerful fellow in teal overalls and a floppy grey hat. He's the make I'm most excited about, and he'll join the gallery the moment he's finished!">
+            <span class="piece__badge">Next make</span>
+            <span class="piece__img" data-swatch="b"></span>
+            <span class="piece__scrim"></span>
+            <span class="piece__meta">
+              <span class="piece__name">Otti</span>
+              <span class="piece__tag">On my hook next</span>
+            </span>
+          </button>
+
+          <!-- Placeholders for future pieces — replace with real photos later
+               by adding images/gallery-03.jpg … and turning these into
+               <button class="piece"> cards like the two above. -->
+          <div class="piece piece--soon" aria-hidden="true">
+            <span class="piece__soon-inner">
+              <span class="piece__soon-mark">✧</span>
+              <span class="piece__soon-label">New piece<br>coming soon</span>
+            </span>
+          </div>
+          <div class="piece piece--soon" aria-hidden="true">
+            <span class="piece__soon-inner">
+              <span class="piece__soon-mark">✧</span>
+              <span class="piece__soon-label">New piece<br>coming soon</span>
+            </span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section id="process" class="section reveal">
+        <p class="kicker">III · How I Make Things</p>
+        <h2 class="h2">My messy, happy process</h2>
+
+        <ol class="process">
+          <li class="step">
+            <span class="step__num">I</span>
+            <div class="step__body">
+              <h3 class="step__title">A spark (or not!)</h3>
+              <p>Sometimes I have a plan… and sometimes I just grab my yarn and start with no idea what it'll turn into. Both are my favorite.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__num">II</span>
+            <div class="step__body">
+              <h3 class="step__title">Learn as I go</h3>
+              <p>Videos, books, and lots of imagination. If there's a stitch I don't know yet, I hunt it down and teach myself.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__num">III</span>
+            <div class="step__body">
+              <h3 class="step__title">Stitch, stitch, stitch</h3>
+              <p>Round after round, a shape starts to appear. Some become plushies; some become happy little blobs — and honestly those teach me the most.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__num">IV</span>
+            <div class="step__body">
+              <h3 class="step__title">Meet the new friend</h3>
+              <p>I add a face and suddenly a personality shows up. Then it gets a name — and it's ready for a hug.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- CONTACT / FOOTER -->
+      <footer id="contact" class="section section--contact reveal">
+        <p class="kicker">IV · Say Hello</p>
+        <h2 class="h2">Let's be friends</h2>
+        <p class="prose prose--center">
+          Love one of my little makes, or have an idea for one? Send me a
+          note — I'd love to hear from you!
+        </p>
+        <a class="btn" href="mailto:hello@example.com">Say hello</a>
+
+        <div class="footer__base">
+          <span class="monogram__mark monogram__mark--sm">A</span>
+          <p class="footer__fine">© <span id="year"></span> Ananya · Fiber &amp; Crochet Artist · Handmade with care</p>
+        </div>
+      </footer>
+
+    </div><!-- /.sheet -->
+  </main>
+
+  <!-- =====================================================================
+       LIGHTBOX MODAL
+       ===================================================================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+    <div class="lightbox__backdrop" data-close></div>
+    <div class="lightbox__panel" role="document">
+      <button class="lightbox__close" type="button" data-close aria-label="Close preview">×</button>
+      <div class="lightbox__media" id="lb-media" aria-hidden="true"></div>
+      <div class="lightbox__body">
+        <p class="kicker">Featured Work</p>
+        <h3 class="lightbox__title" id="lb-title">Piece name</h3>
+        <div class="lightbox__rule" aria-hidden="true"></div>
+        <dl class="lightbox__specs">
+          <div class="spec">
+            <dt>Yarn type</dt>
+            <dd id="lb-yarn">—</dd>
+          </div>
+          <div class="spec">
+            <dt>Stitch used</dt>
+            <dd id="lb-stitch">—</dd>
+          </div>
+        </dl>
+        <p class="lightbox__story" id="lb-story">Story description.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
