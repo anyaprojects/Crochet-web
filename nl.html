@@ -28,16 +28,19 @@
     <a class="monogram" href="#top" aria-label="Ananya — home">
       <span class="monogram__mark">A</span>
     </a>
-    <nav class="topnav" aria-label="Hoofdmenu">
-      <a href="#about">Verhaal</a>
-      <a href="#gallery">Galerij</a>
-      <a href="#process">Werkwijze</a>
-      <a href="#contact">Contact</a>
-      <span aria-hidden="true" style="opacity:.4;margin:0 .1rem">·</span>
-      <a href="./" hreflang="en">EN</a>
-      <a href="nl.html" hreflang="nl" aria-current="true" style="text-decoration:underline">NL</a>
-      <a href="de.html" hreflang="de">DE</a>
-    </nav>
+    <div class="topbar__right">
+      <nav class="topnav" aria-label="Hoofdmenu">
+        <a href="#about">Verhaal</a>
+        <a href="#gallery">Galerij</a>
+        <a href="#process">Werkwijze</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <nav class="langswitch" aria-label="Taal">
+        <a href="./" hreflang="en">EN</a>
+        <a href="nl.html" hreflang="nl" aria-current="true">NL</a>
+        <a href="de.html" hreflang="de">DE</a>
+      </nav>
+    </div>
   </header>
 
   <main id="top">
@@ -217,7 +220,7 @@
           Ben je verliefd op een van mijn knuffeltjes, of heb je een idee voor
           eentje? Stuur me een berichtje — ik hoor graag van je!
         </p>
-        <a class="btn" href="mailto:hello@example.com">Zeg hallo</a>
+        <a class="btn" data-contact data-subject="Hallo via je website" href="#contact">Zeg hallo</a>
 
         <div class="footer__base">
           <span class="monogram__mark monogram__mark--sm">A</span>

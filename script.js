@@ -23,6 +23,7 @@
     initReveal();
     initParallax();
     initTopbar();
+    wireContact();
     stampYear();
   });
 
@@ -154,5 +155,22 @@
   function stampYear() {
     var el = document.getElementById("year");
     if (el) el.textContent = String(new Date().getFullYear());
+  }
+
+  /* -----------------------------------------------------------------------
+     E. Contact email — assembled at runtime from base64 parts so the raw
+        HTML never contains a plaintext address for spam crawlers to harvest.
+     ----------------------------------------------------------------------- */
+  function wireContact() {
+    var els = document.querySelectorAll("[data-contact]");
+    if (!els.length) return;
+    try {
+      var addr = atob("YW5hbmRhbmFueWE0") + "@" + atob("aWNsb3VkLmNvbQ==");
+      var href = "mailto:" + addr;
+      Array.prototype.forEach.call(els, function (el) {
+        var subj = el.getAttribute("data-subject");
+        el.setAttribute("href", href + (subj ? "?subject=" + encodeURIComponent(subj) : ""));
+      });
+    } catch (e) { /* no-op */ }
   }
 })();

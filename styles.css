@@ -159,6 +159,8 @@ a { color: inherit; }
 }
 .topbar.is-scrolled .topnav a { color: var(--ink); }
 .topbar.is-scrolled .topnav a:hover { border-color: var(--marsala); }
+.topbar.is-scrolled .langswitch a { color: var(--ink); }
+.topbar.is-scrolled .langswitch a:hover { border-color: var(--marsala); }
 .topbar.is-scrolled .monogram {
   background: transparent;
   border-color: var(--marsala);
@@ -199,6 +201,24 @@ a { color: inherit; }
   transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
 }
 .topnav a:hover { border-color: var(--gold-soft); }
+
+/* Right-hand header group: section nav + always-on language switcher */
+.topbar__right { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 30px); }
+.langswitch { display: flex; gap: 14px; }
+.langswitch a {
+  font-family: var(--font-label);
+  font-weight: 400;
+  font-size: 12.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(251, 247, 238, 0.9);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+.langswitch a:hover { border-color: var(--gold-soft); }
+.langswitch a[aria-current="true"] { border-bottom-color: var(--gold-soft); font-weight: 500; }
 
 /* -------------------------------------------------------------------------
    5. HERO — the photograph shows through; only the title lives here

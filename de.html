@@ -28,16 +28,19 @@
     <a class="monogram" href="#top" aria-label="Ananya — Startseite">
       <span class="monogram__mark">A</span>
     </a>
-    <nav class="topnav" aria-label="Hauptmenü">
-      <a href="#about">Geschichte</a>
-      <a href="#gallery">Galerie</a>
-      <a href="#process">Vorgehen</a>
-      <a href="#contact">Kontakt</a>
-      <span aria-hidden="true" style="opacity:.4;margin:0 .1rem">·</span>
-      <a href="./" hreflang="en">EN</a>
-      <a href="nl.html" hreflang="nl">NL</a>
-      <a href="de.html" hreflang="de" aria-current="true" style="text-decoration:underline">DE</a>
-    </nav>
+    <div class="topbar__right">
+      <nav class="topnav" aria-label="Hauptmenü">
+        <a href="#about">Geschichte</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#process">Vorgehen</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <nav class="langswitch" aria-label="Sprache">
+        <a href="./" hreflang="en">EN</a>
+        <a href="nl.html" hreflang="nl">NL</a>
+        <a href="de.html" hreflang="de" aria-current="true">DE</a>
+      </nav>
+    </div>
   </header>
 
   <main id="top">
@@ -218,7 +221,7 @@
           Hat dir eines meiner kleinen Werke das Herz gestohlen, oder hast du
           eine Idee für eines? Schreib mir — ich freue mich über jede Nachricht!
         </p>
-        <a class="btn" href="mailto:hello@example.com">Sag Hallo</a>
+        <a class="btn" data-contact data-subject="Hallo über deine Website" href="#contact">Sag Hallo</a>
 
         <div class="footer__base">
           <span class="monogram__mark monogram__mark--sm">A</span>
