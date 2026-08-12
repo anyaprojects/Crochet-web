@@ -781,9 +781,10 @@ main { position: relative; z-index: 10; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stat { border-bottom: 1px solid var(--line); padding-right: 20px; }
   .stat:nth-child(2) { border-right: 0; }
-  .lightbox__panel { grid-template-columns: 1fr; }
-  /* Stacked layout: give the photo a portrait window (like the cards) so tall
-     images aren't squashed into a short banner that crops the subject. */
+  /* Stack as normal block flow (not grid): a grid item's aspect-ratio fights
+     align-items:stretch and lets the body overlap the photo. Plain flow gives
+     the photo a reliable portrait window with the text cleanly below it. */
+  .lightbox__panel { display: block; }
   .lightbox__media { min-height: 0; aspect-ratio: 4 / 5; }
 }
 
