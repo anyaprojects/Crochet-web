@@ -782,7 +782,9 @@ main { position: relative; z-index: 10; }
   .stat { border-bottom: 1px solid var(--line); padding-right: 20px; }
   .stat:nth-child(2) { border-right: 0; }
   .lightbox__panel { grid-template-columns: 1fr; }
-  .lightbox__media { min-height: 240px; }
+  /* Stacked layout: give the photo a portrait window (like the cards) so tall
+     images aren't squashed into a short banner that crops the subject. */
+  .lightbox__media { min-height: 0; aspect-ratio: 4 / 5; }
 }
 
 @media (max-width: 620px) {
