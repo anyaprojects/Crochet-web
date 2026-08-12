@@ -438,7 +438,8 @@ main { position: relative; z-index: 10; }
   /* Real photo (images/gallery-0N.jpg) via inline --photo, gradient behind */
   background-image: var(--photo, none), var(--sw-a);
   background-size: cover, cover;
-  background-position: center, center;
+  /* --photo-y lets an individual card nudge its photo crop vertically */
+  background-position: center var(--photo-y, center), center;
   transition: transform 1.1s var(--ease);
 }
 .piece[data-swatch="a"] .piece__img { background-image: var(--photo, none), var(--sw-a); }
@@ -711,7 +712,7 @@ main { position: relative; z-index: 10; }
   min-height: 380px;
   background-image: var(--lb-photo, none), var(--lb-swatch, var(--sw-a));
   background-size: cover, cover;
-  background-position: center, center;
+  background-position: center var(--lb-photo-y, center), center;
 }
 .lightbox__body { padding: clamp(28px, 3.4vw, 52px); }
 .lightbox__title {

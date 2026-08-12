@@ -79,6 +79,9 @@
       // The inline --photo value carries the real image URL (or none)
       var photo = piece.style.getPropertyValue("--photo");
       els.media.style.setProperty("--lb-photo", photo && photo.trim() ? photo : "none");
+      // Carry any per-piece vertical crop nudge into the enlarged view
+      var photoY = piece.style.getPropertyValue("--photo-y");
+      els.media.style.setProperty("--lb-photo-y", photoY && photoY.trim() ? photoY : "center");
 
       modal.hidden = false;
       document.body.style.overflow = "hidden";
