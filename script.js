@@ -76,8 +76,9 @@
       // Mirror the piece's swatch + real photo (if present) into the modal
       var swatch = piece.getAttribute("data-swatch") || "a";
       els.media.style.setProperty("--lb-swatch", "var(--sw-" + swatch + ")");
-      // The inline --photo value carries the real image URL (or none)
-      var photo = piece.style.getPropertyValue("--photo");
+      // The card face uses --photo; a card may override the enlarged view via data-lb-photo
+      var lbOverride = piece.getAttribute("data-lb-photo");
+      var photo = lbOverride ? "url('" + lbOverride + "')" : piece.style.getPropertyValue("--photo");
       els.media.style.setProperty("--lb-photo", photo && photo.trim() ? photo : "none");
       // Carry any per-piece vertical crop nudge into the enlarged view
       var photoY = piece.style.getPropertyValue("--photo-y");
